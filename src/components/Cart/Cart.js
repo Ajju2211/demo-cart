@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import {
+    useParams
+  } from "react-router-dom";
 import Product from '../Product/Product'
 // import './style.css'
 
 function Cart() {
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
+    let { id } = useParams();
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products/"+12)
+        fetch("https://fakestoreapi.com/products/"+id)
             .then((r) => r.json().then(res => {
                 setProduct(res);
                 setLoading(false);

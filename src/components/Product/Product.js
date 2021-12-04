@@ -30,7 +30,7 @@ function Product(props) {
                 </p>
                 <div class="btn-group">
                     <div class="btn">
-                        {props.cart ? <a href="#">Buy now</a>: <a href={"/cart/"+12}>Add to cart</a>}
+                        {props.cart ? <a href="#">Buy now</a>: <a href={"/cart/"+props.id}>Add to cart</a>}
                     </div>
                 </div>
             </div>
